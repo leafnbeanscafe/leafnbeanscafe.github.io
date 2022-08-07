@@ -392,10 +392,14 @@
                 <div class="col-md-4">
                     <div class="block wow fadeInLeft"  data-wow-delay="700ms">
                     	<script>
-		            var url = window.location.href;
-			    	$.getJSON('https://api.gosquared.com/now/v3/pages?api_key=1FSQ8BK2OGGI1O3H&site_token=GSN-150894-J&href=' + encodeURIComponent(url), function(data) {
-	  		    	$('#online-now').addClass('visible').find('.visitors').text(data.visitors);
-			    });
+			    var url = 'https://leafnbeanscafe.github.io/';
+			    var updateGoSquared = function() {
+			    $.getJSON('https://api.gosquared.com/now/v3/pages?api_key=1FSQ8BK2OGGI1O3H&site_token=GSN-150894-J&href=' + encodeURIComponent(url), function(data) {
+			    setTimeout(updateGoSquared, 5000);
+			    $('#online-now').addClass('visible').find('.visitors').text(data.visitors);
+			   });
+			   };
+			   updateGoSquared();
                     	</script>
                         <h3>CURRENTLY <span>ONLINE</span></h3>
                         <div class="blog">
