@@ -30,7 +30,7 @@
     <script src="js/plugins.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
-	</head>
+    </head>
 	<body>
 	<!--
 	header- start 
@@ -391,17 +391,18 @@
                 <!-- .col-md-4 close -->
                 <div class="col-md-4">
                     <div class="block wow fadeInLeft"  data-wow-delay="700ms">
-                        <h3>LATEST <span>BLOG POSTS</span></h3>
+                    	<script>
+		            var url = window.location.href;
+			    	$.getJSON('https://api.gosquared.com/now/v3/pages?api_key=1FSQ8BK2OGGI1O3H&site_token=GSN-150894-J&href=' + encodeURIComponent(url), function(data) {
+	  		    	$('#online-now').addClass('visible').find('.visitors').text(data.visitors);
+			    });
+                    	</script>
+                        <h3>CURRENTLY <span>ONLINE</span></h3>
                         <div class="blog">
-                            <ul>
-                                <li>
-                                    <h4><a href="#">Aug 7-2022</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
-                                </li>
-                                <li>
-                                    <h4><a href="#">July 15-2022</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
-                                </li>
+                          <ul>
+                           <li>
+                           <p id="online-now" style=""><span class="visitors">0</span> people are currently viewing this page.</p>
+                           </li>
                             </ul>                
                         </div>
                     </div>
