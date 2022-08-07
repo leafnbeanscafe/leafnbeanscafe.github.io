@@ -346,7 +346,14 @@
                                 <textarea class="form-control" rows="3" placeholder="Write your message here..."></textarea>
                             </div>
                         </form>
-                        <a class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" href="#" role="button">send your message</a>
+                        <a class="btn btn-default wow bounceIn" data-wow-duration="500ms" data-wow-delay="1300ms" href="#" role="button" onclick="return contactus();">send your message</a>
+                        <script type="text/javascript">
+    				function contactus () {
+        				// Return true or false, depending on whether you want to allow the `href` property to follow through or not
+        				alert('We are currently not monitoring the mailbox leafnbeanscafe@gmail.com. Please keep watching this space or visit our cafe for more information.');
+        				return false;
+    				}
+			</script>
                     </div>
                 </div><!-- .col-md-12 close -->
             </div><!-- .row close -->
@@ -388,11 +395,11 @@
                         <div class="blog">
                             <ul>
                                 <li>
-                                    <h4><a href="#">Nov 9-2014</a></h4>
+                                    <h4><a href="#">Aug 7-2022</a></h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
                                 </li>
                                 <li>
-                                    <h4><a href="#">Sep 8-2014</a></h4>
+                                    <h4><a href="#">July 15-2022</a></h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adip iscing elit. Curabitur ut blandit sapien</p>
                                 </li>
                             </ul>                
