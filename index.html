@@ -396,7 +396,7 @@
 			    const NAMESPACE = "leafnbeanscafe.github.io";
 			    const COUNT_URL = `https://api.countapi.xyz`;
 
-			    const counter = document.querySelectorAll('&nbsp;');
+			    const counter = document.querySelectorAll('code');
 
 			    const getCount = async () => {
 				const response = await fetch(`${COUNT_URL}/get/${NAMESPACE}/${KEY}`);
@@ -411,11 +411,11 @@
 			  };
 
 			  const setValue = (num) => {
-			  var str = num.toString().padStart(6, "0");
+			  var str = num.toString().padStart(5, "0");
 			  for (let index = 0; index < str.length; index++) {
 				    const element = str[index];
-			            //counter[index].innerHTML = element;
-			            counter[index] = element;
+			            counter[index].innerHTML = element;
+			            
 			 }
 			 };
 
@@ -432,7 +432,11 @@
                     	</script>
                         <h3><span>CUSTOMER VISITS</span> TO THIS PAGE</h3>
                          <div class="counter_center">
-      				&nbsp;0&nbsp;0&nbsp;0&nbsp;0&nbsp;0&nbsp;0
+      				<code>0</code>
+      				<code>0</code>
+      				<code>0</code>
+      				<code>0</code>
+      				<code>0</code>
       			</div>
                     </div>
                 </div>
