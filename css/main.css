@@ -700,14 +700,24 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   color: #FF4F02;
 }
 
-#online-now {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* start with the text hidden */
-  opacity: 0;
-  /* add a transition so it'll fade in nicely */
-  transition: opacity 0.2s ease-out;
+/*--
+    UNIQUE VISITOR COUNT STYLING
+--*/
+.counter_center span {
+  display: inline-block;
+  padding: 10px 10px 6px;
+  border-radius: 6px;
+  background: #80b4e5;
+  margin: 5px 5px;
+  font-size: 5rem;
 }
-
-#online-now.visible {
-  opacity: 1;
+.counter{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.message {
+  color: #ccc6e3;
+    text-align: center;
+    margin-top: 10px;
 }
