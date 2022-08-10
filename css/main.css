@@ -703,7 +703,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 /*--
     UNIQUE VISITOR COUNT STYLING
 --*/
-.counter_center span {
+.counter_center {
   display: inline-block;
   padding: 10px 10px 6px;
   border-radius: 6px;
